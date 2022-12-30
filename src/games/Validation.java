@@ -52,8 +52,26 @@ public class Validation {
         return m.matches();
     }
     
+    public boolean Password (String password1){
+        
+        Pattern p = Pattern.compile("\\[a-zA-Z_0-9-$%@]{5,17}$");
+
+        Matcher m = p.matcher(password1);
+        
+        return m.matches();
     
+    }
     
+    public boolean RepeatPassword(String p1, String p2 ){
+        
+        if(p1.compareTo(p2)==0){
+            
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     
     
     
